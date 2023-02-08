@@ -24,6 +24,8 @@ public class App
                 .append("year", "2012")
                 .append("result", new Document("CW", 95).append("EX", 85));
         // Add document to collection
+
+
         collection.insertOne(doc);
 
         // Check document in collection
