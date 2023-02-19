@@ -11,7 +11,10 @@ public class App
 
         // Connect to Database
         a.connect();
-
+        // Gets Employee
+        Employee emp = a.getEmployee(255550);
+        // Display results
+        a.displayEmployee(emp);
         // Disconnect from Database
         a.disconnect();
 
@@ -118,5 +121,23 @@ public class App
     }
 
 
+    /**
+     * Displays an Employee
+     * @param emp
+     */
+    public void displayEmployee(Employee emp)
+    {
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
 
 }
